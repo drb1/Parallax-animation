@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.background {
+  background: linear-gradient(#e66465, #9198e5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+}
+
+.scrollText {
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  height: 30rem;
+  width: 25%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.parallax {
+  margin-right: 15%;
+}
+
+.sticky {
+  margin-left: 15%;
+  background-color: #ff6d6d;
+}
+
+.blue {
+  background-color: #5b65ad;
+  color: white;
+}
+
+.purple {
+  background-color: #9d65d0;
+}
+
+#progress {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+}
+
+.bg {
+  stroke: white;
+  opacity: 0.3;
+}
+
+#progress .indicator {
+  stroke: white;
+}
+
+.testimonials {
+  display: flex;
+  list-style: none;
+  height: 50%;
+  overflow-x: scroll;
+  padding: 20px 0;
+  flex: 0 0 70%;
+  margin: 0 auto;
+}
+
+.testimonials li {
+  flex: 0 0 300px;
+  background: white;
+  margin: 0 20px 0 0;
+}
+
+.testimonilas li:last-of-type {
+  margin: 0;
+}
+
+@media (max-width: 750px) {
+  .card {
+    width: 40%;
+  }
+
+  .parallax {
+    margin-right: 1.5rem;
+  }
+
+  .sticky {
+    margin-left: 1.5rem;
+  }
+}
