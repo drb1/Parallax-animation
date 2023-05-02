@@ -23,13 +23,75 @@ body {
 }
 
 .background {
-  background: linear-gradient(#e66465, #9198e5);
+  background: gray;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
 
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+}
+
+.stickys {
+  z-index: 555;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.button-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: transparent;
+
+}
+
+nav button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+nav ul,
+
+
+ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 0;
+  width: 230px;
+
+}
+
+li {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 
 .scrollText {
@@ -40,20 +102,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25rem;
-  height: 30rem;
-  width: 25%;
-  text-align: center;
   border-radius: 10px;
+  background-color: transparent;
+  height: 50vh;
+  width: 100vw;
+  padding: 10;
 }
 
 .parallax {
   margin-right: 15%;
 }
 
-.sticky {
+.bannerBackground {
   margin-left: 15%;
   background-color: #ff6d6d;
+  font-size: 1.25rem;
 }
 
 .blue {
@@ -105,6 +168,16 @@ circle {
 
 .testimonilas li:last-of-type {
   margin: 0;
+}
+
+.parallax-effect {
+  @include background;
+  transform-style: preserve-3d;
+}
+
+.inner-element {
+  color: white;
+  transform: translateZ(60px);
 }
 
 @media (max-width: 750px) {
